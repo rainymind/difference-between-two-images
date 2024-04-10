@@ -1,0 +1,15 @@
+% Read the two images
+image1 = imread('image1.jpg');
+image2 = imread('image2.jpg');
+
+% Check if both images have the same size
+if isequal(size(image1), size(image2))
+    % Calculate the difference between the two images
+    difference = imabsdiff(image1, image2);
+    
+    % Display the difference
+    imshow(difference);
+    title('Difference between image1 and image2');
+else
+    disp('Error: Images are not the same size.');
+end
